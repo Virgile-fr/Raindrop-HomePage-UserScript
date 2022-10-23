@@ -46,7 +46,9 @@ function GM_addStyle (cssStr) {
 }
 
 
-GM_addStyle ( `  /* ------------------- START ------------------- */
+GM_addStyle(`  /*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
+/*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
+
 
 @media (prefers-color-scheme: light) { :root {
 --bodybkg:#FEFEFE;
@@ -138,11 +140,25 @@ margin: 0px;
 scrollbar-width: none !important;  /* Firefox */}
 *::-webkit-scrollbar {display: none !important;}/* Safari and Chrome */
 
-/* ------------------------- END -------------------------*/  ` );
+
+/*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
+`);  /*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
+
+
+/* pour que l'url finisse par un "/" afin que les filtres fonctionnent */
+function changeURL(newUrl){  document.location.href = newUrl;  }
+let actualURL = document.URL;
+if (document.URL.substr(-1) != '/') actualURL += '/';
+if ((document.URL.substr(-1) != '/') & ((document.URL.split('/').length) <= 5)) changeURL(actualURL);
+
 
 
 $("body").append ( `
-<a href="/virgile-arlaud">
-<div id="test"> My Profile
-</div></a>
+<div id="test">
+  <a href=".."><button>My Profile</button></a>
+  <a href="sort=-created&perpage=30&page=0"><button>Filter Newest</button></a>
+  <a href="sort=created&perpage=30&page=0"><button>Filter Oldest</button></a>
+  <a href="sort=title&perpage=30&page=0"><button>Filter A to Z</button></a>
+  <a href="sort=-title&perpage=30&page=0"><button>Filter Z to A</button></a>
+</div>
 ` );
