@@ -4,6 +4,8 @@
 // @match       https://raindrop.io/virgile-arlaud*
 // @require  https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
 // @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @updateURL https://raw.githubusercontent.com/Virgile-fr/Raindrop-HomePage/main/Raindrop%20HomePage.js
+// @downloadURL https://raw.githubusercontent.com/Virgile-fr/Raindrop-HomePage/main/Raindrop%20HomePage.js
 // @grant    GM_addStyle
 // @grant    GM_addElement
 // @grant    GM.getValue
