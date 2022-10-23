@@ -46,8 +46,9 @@ function GM_addStyle (cssStr) {
 }
 
 
-GM_addStyle(`  /*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
-/*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
+
+GM_addStyle(`/*___________________________________________________________________________________________________________________________*/
+
 
 
 @media (prefers-color-scheme: light) { :root {
@@ -134,15 +135,19 @@ margin: 0px;
 }
 
 #test:hover {opacity:100%;}
+#test a{
+  margin: 0px 1vw;
+}
 
 /* No Scrollbar */
 * {-ms-overflow-style: none !important;  /* Internet Explorer 10+ */
 scrollbar-width: none !important;  /* Firefox */}
-*::-webkit-scrollbar {display: none !important;}/* Safari and Chrome */
+*::-webkit-scrollbar {display: none !important;} /*Chrome */
+.element::-webkit-scrollbar { -webkit-appearance: none; width: 0;height: 0; } /*Safari*/
 
 
-/*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
-`);  /*🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨🎨*/
+`);/*_____________________________________________________________________________________________________________________________________*/
+
 
 
 /* pour que l'url finisse par un "/" afin que les filtres fonctionnent */
@@ -160,5 +165,6 @@ $("body").append ( `
   <a href="sort=created&perpage=30&page=0"><button>Filter Oldest</button></a>
   <a href="sort=title&perpage=30&page=0"><button>Filter A to Z</button></a>
   <a href="sort=-title&perpage=30&page=0"><button>Filter Z to A</button></a>
+  <a href="."><button>Custom Filter</button></a>
 </div>
 ` );
